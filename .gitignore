@@ -66,3 +66,5 @@ sysinfo.txt
 /Capstone/.vs/Capstone/v15/Server/sqlite3/storage.ide
 /Capstone/.vs/Capstone/v15/Server/sqlite3/storage.ide-shm
 /Capstone/.vs/Capstone/v15/Server/sqlite3/storage.ide-wal
+Plugin/RoyNetPlugin/Debug/
+Plugin/RoyNetPlugin/RoyNetPlugin/Debug/
