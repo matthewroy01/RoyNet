@@ -61,7 +61,23 @@ public class Replicator : MonoBehaviour
                         Debug.Log(info[j].Name + "\nMemberType: " + info[j]);
 
                         string typeAsString = GetTypeAsString(info[j]);
-                        members.Add(new MyMemberInfo(info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), classNames[i]));
+
+                        object ptr = null;
+                        switch(info[j])
+                        {
+                            case FieldInfo fieldInfo:
+                            {
+                                ptr = fieldInfo.GetValue(comps[i]);
+                                break;
+                            }
+                            case PropertyInfo propertyInfo:
+                            {
+                                ptr = propertyInfo.GetValue(comps[i]);
+                                break;
+                            }
+                        }
+
+                        members.Add(new MyMemberInfo(ptr, info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), classNames[i]));
                     }
                 }
             }
@@ -80,10 +96,11 @@ public class Replicator : MonoBehaviour
 [System.Serializable]
 public struct MyMemberInfo
 {
-    public MyMemberInfo(string n, string tn, System.Type t, string tno, string o)
+    public MyMemberInfo(object ptr, string n, string tn, System.Type t, string tno, string o)
     {
         send = false;
         deadReckon = false;
+
         pointer = null;
 
         name = n;
@@ -100,5 +117,5 @@ public struct MyMemberInfo
     public System.Type type;
     public string typeNameOrigin;
     public string owner;
-    public FieldInfo pointer;
+    public object pointer;
 }
