@@ -112,6 +112,506 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &101722217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101722222}
+  - component: {fileID: 101722221}
+  - component: {fileID: 101722220}
+  - component: {fileID: 101722219}
+  - component: {fileID: 101722218}
+  m_Layer: 0
+  m_Name: Wall3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &101722218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101722217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: sharedMesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: mesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: additionalVertexStreams
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: subMeshStartIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapTilingOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: castShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectors
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: useLightProbes
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isVisible
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: shadowCastingMode
+    typeName: UnityEngine.Rendering.ShadowCastingMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: receiveShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectorGenerationMode
+    typeName: UnityEngine.MotionVectorGenerationMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeUsage
+    typeName: UnityEngine.Rendering.LightProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: reflectionProbeUsage
+    typeName: UnityEngine.Rendering.ReflectionProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: renderingLayerMask
+    typeName: UInt32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: rendererPriority
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerName
+    typeName: System.String
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerID
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingOrder
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: allowOcclusionWhenDynamic
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isPartOfStaticBatch
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeProxyVolumeOverride
+    typeName: UnityEngine.GameObject
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: probeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: materials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: center
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: size
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: extents
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: attachedRigidbody
+    typeName: UnityEngine.Rigidbody
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: isTrigger
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: contactOffset
+    typeName: Single
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  classNames:
+  - Transform
+  - MeshFilter
+  - MeshRenderer
+  - BoxCollider
+--- !u!65 &101722219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101722217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &101722220
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101722217}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0f41ea2774caba64eb129853785daee7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &101722221
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101722217}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &101722222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101722217}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -25.5}
+  m_LocalScale: {x: 50, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,9 +678,58 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &264481910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264481911}
+  - component: {fileID: 264481912}
+  m_Layer: 0
+  m_Name: RoyNetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264481911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264481910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264481912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264481910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1ca97b67166f44789fea34fa5e2160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doNetworking: 1
+  doDebugMessages: 0
+  model: 0
+  externalServerExe: 0
+  delayBetweenUpdates: 0
+  replicated: []
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,13 +805,513 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1568418361}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &925814079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925814080}
+  - component: {fileID: 925814084}
+  - component: {fileID: 925814083}
+  - component: {fileID: 925814082}
+  - component: {fileID: 925814081}
+  m_Layer: 0
+  m_Name: Wall1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &925814080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925814079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.5, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50}
+  m_Children: []
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925814081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925814079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: sharedMesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: mesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: additionalVertexStreams
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: subMeshStartIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapTilingOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: castShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectors
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: useLightProbes
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isVisible
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: shadowCastingMode
+    typeName: UnityEngine.Rendering.ShadowCastingMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: receiveShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectorGenerationMode
+    typeName: UnityEngine.MotionVectorGenerationMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeUsage
+    typeName: UnityEngine.Rendering.LightProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: reflectionProbeUsage
+    typeName: UnityEngine.Rendering.ReflectionProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: renderingLayerMask
+    typeName: UInt32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: rendererPriority
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerName
+    typeName: System.String
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerID
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingOrder
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: allowOcclusionWhenDynamic
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isPartOfStaticBatch
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeProxyVolumeOverride
+    typeName: UnityEngine.GameObject
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: probeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: materials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: center
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: size
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: extents
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: attachedRigidbody
+    typeName: UnityEngine.Rigidbody
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: isTrigger
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: contactOffset
+    typeName: Single
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  classNames:
+  - Transform
+  - MeshFilter
+  - MeshRenderer
+  - BoxCollider
+--- !u!65 &925814082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925814079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &925814083
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925814079}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 954f1e9b215c2b44eae5f7a350b4fa58, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &925814084
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925814079}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &974728423
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +1324,7 @@ GameObject:
   - component: {fileID: 974728426}
   - component: {fileID: 974728425}
   - component: {fileID: 974728424}
+  - component: {fileID: 974728428}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -347,10 +1397,1593 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974728423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974728428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974728423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: sharedMesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: mesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: additionalVertexStreams
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: subMeshStartIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapTilingOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: castShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectors
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: useLightProbes
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isVisible
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: shadowCastingMode
+    typeName: UnityEngine.Rendering.ShadowCastingMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: receiveShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectorGenerationMode
+    typeName: UnityEngine.MotionVectorGenerationMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeUsage
+    typeName: UnityEngine.Rendering.LightProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: reflectionProbeUsage
+    typeName: UnityEngine.Rendering.ReflectionProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: renderingLayerMask
+    typeName: UInt32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: rendererPriority
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerName
+    typeName: System.String
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerID
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingOrder
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: allowOcclusionWhenDynamic
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isPartOfStaticBatch
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeProxyVolumeOverride
+    typeName: UnityEngine.GameObject
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: probeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: materials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: center
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: size
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: extents
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: attachedRigidbody
+    typeName: UnityEngine.Rigidbody
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: isTrigger
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: contactOffset
+    typeName: Single
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  classNames:
+  - Transform
+  - MeshFilter
+  - MeshRenderer
+  - BoxCollider
+--- !u!1 &1017707542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017707547}
+  - component: {fileID: 1017707546}
+  - component: {fileID: 1017707545}
+  - component: {fileID: 1017707544}
+  - component: {fileID: 1017707543}
+  m_Layer: 0
+  m_Name: Wall4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1017707543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017707542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: sharedMesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: mesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: additionalVertexStreams
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: subMeshStartIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapTilingOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: castShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectors
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: useLightProbes
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isVisible
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: shadowCastingMode
+    typeName: UnityEngine.Rendering.ShadowCastingMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: receiveShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectorGenerationMode
+    typeName: UnityEngine.MotionVectorGenerationMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeUsage
+    typeName: UnityEngine.Rendering.LightProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: reflectionProbeUsage
+    typeName: UnityEngine.Rendering.ReflectionProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: renderingLayerMask
+    typeName: UInt32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: rendererPriority
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerName
+    typeName: System.String
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerID
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingOrder
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: allowOcclusionWhenDynamic
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isPartOfStaticBatch
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeProxyVolumeOverride
+    typeName: UnityEngine.GameObject
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: probeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: materials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: center
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: size
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: extents
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: attachedRigidbody
+    typeName: UnityEngine.Rigidbody
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: isTrigger
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: contactOffset
+    typeName: Single
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  classNames:
+  - Transform
+  - MeshFilter
+  - MeshRenderer
+  - BoxCollider
+--- !u!65 &1017707544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017707542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1017707545
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017707542}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d8330abce5a2ee0459702b827d567b04, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1017707546
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017707542}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1017707547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017707542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 25.5}
+  m_LocalScale: {x: 50, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568418357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568418361}
+  - component: {fileID: 1568418360}
+  - component: {fileID: 1568418359}
+  - component: {fileID: 1568418358}
+  - component: {fileID: 1568418364}
+  - component: {fileID: 1568418363}
+  - component: {fileID: 1568418362}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1568418358
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1568418359
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1568418360
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1568418361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 534669905}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568418362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc50ce2a03f05b440be475c1da1607db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camSpeedHorizontal: 5
+  camSpeedVertical: 5
+--- !u!114 &1568418363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e9e65ed3529484cb8baffd86119174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movSpd: 20
+--- !u!54 &1568418364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568418357}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!1 &1751269038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751269043}
+  - component: {fileID: 1751269042}
+  - component: {fileID: 1751269041}
+  - component: {fileID: 1751269040}
+  - component: {fileID: 1751269039}
+  m_Layer: 0
+  m_Name: Wall2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1751269039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751269038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+  - send: 0
+    deadReckon: 0
+    name: sharedMesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: mesh
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshFilter
+  - send: 0
+    deadReckon: 0
+    name: additionalVertexStreams
+    typeName: UnityEngine.Mesh
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: subMeshStartIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapTilingOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: castShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectors
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: useLightProbes
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isVisible
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: shadowCastingMode
+    typeName: UnityEngine.Rendering.ShadowCastingMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: receiveShadows
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: motionVectorGenerationMode
+    typeName: UnityEngine.MotionVectorGenerationMode
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeUsage
+    typeName: UnityEngine.Rendering.LightProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: reflectionProbeUsage
+    typeName: UnityEngine.Rendering.ReflectionProbeUsage
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: renderingLayerMask
+    typeName: UInt32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: rendererPriority
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerName
+    typeName: System.String
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingLayerID
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sortingOrder
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: allowOcclusionWhenDynamic
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: isPartOfStaticBatch
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightProbeProxyVolumeOverride
+    typeName: UnityEngine.GameObject
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: probeAnchor
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapIndex
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: lightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: realtimeLightmapScaleOffset
+    typeName: UnityEngine.Vector4
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: materials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.Material
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterials
+    typeName: UnityEngine.Material[]
+    typeNameOrigin: Property
+    owner: MeshRenderer
+  - send: 0
+    deadReckon: 0
+    name: center
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: size
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: extents
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: enabled
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: attachedRigidbody
+    typeName: UnityEngine.Rigidbody
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: isTrigger
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: contactOffset
+    typeName: Single
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: bounds
+    typeName: UnityEngine.Bounds
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: sharedMaterial
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  - send: 0
+    deadReckon: 0
+    name: material
+    typeName: UnityEngine.PhysicMaterial
+    typeNameOrigin: Property
+    owner: BoxCollider
+  classNames:
+  - Transform
+  - MeshFilter
+  - MeshRenderer
+  - BoxCollider
+--- !u!65 &1751269040
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751269038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1751269041
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751269038}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ec9451f891536424a9961f94aaa39880, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1751269042
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751269038}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1751269043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751269038}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.5, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50}
+  m_Children: []
+  m_Father: {fileID: 1907693461}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1907693460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907693461}
+  m_Layer: 0
+  m_Name: Environment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907693461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907693460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 974728427}
+  - {fileID: 925814080}
+  - {fileID: 1751269043}
+  - {fileID: 101722222}
+  - {fileID: 1017707547}
+  - {fileID: 170076735}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
