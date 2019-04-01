@@ -6,6 +6,8 @@
  *	original code by Dan Buckstein, 2018
 */
 
+#include "pch.h"
+
 // Dan Buckstein code start
 
 #if (defined _WINDOWS || defined _WIN32)

@@ -3,6 +3,8 @@
  *	https://github.com/matthewroy01/RoyNet
 */
 
+#include "pch.h"
+
 #include "roynet_plugin.h"
 
 int testFunction()
