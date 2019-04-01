@@ -7,13 +7,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RoyNetPlugin.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="roynet_plugin.cpp" />
     <ClCompile Include="roynet_plugin_main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RoyNetPlugin.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="roynet_plugin.h" />
