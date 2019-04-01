@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using System;
 
 [CustomEditor(typeof(Replicator))]
 public class ReplicatorEditor : Editor
@@ -20,6 +21,8 @@ public class ReplicatorEditor : Editor
     public override void OnInspectorGUI()
     {
         Replicator targ = (Replicator)target;
+
+        EditorGUILayout.LabelField("ID: " + targ.gameObject.name);
 
         if (GUILayout.Button("Get Members"))
         {
@@ -70,6 +73,18 @@ public class ReplicatorEditor : Editor
         for (int i = 0; i < deadReckonTypes.Length; ++i)
         {
             if (type == deadReckonTypes[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool CheckDeadReckonType(string type)
+    {
+        for (int i = 0; i < deadReckonTypes.Length; ++i)
+        {
+            if (Type.GetType(type) == deadReckonTypes[i])
             {
                 return true;
             }

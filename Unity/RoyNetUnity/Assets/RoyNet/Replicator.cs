@@ -101,7 +101,7 @@ public struct MyMemberInfo
         send = false;
         deadReckon = false;
 
-        pointer = null;
+        pointer = ptr;
 
         name = n;
         typeName = tn;
