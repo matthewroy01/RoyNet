@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// need this for plugin
+using System.Runtime.InteropServices;
+
 public class RoyNetManager : MonoBehaviour
 {
+    const string DLL_NAME = "RoyNetPlugin";
+
+    [DllImport(DLL_NAME)]
+    static extern int TestFunction();
+
     public bool doNetworking;
     public bool doDebugMessages;
 
@@ -24,6 +32,8 @@ public class RoyNetManager : MonoBehaviour
 
         // start networking
         StartCoroutine(NetworkUpdate());
+
+        DebugMessage(TestFunction().ToString());
     }
 
     private void GetReplicators()

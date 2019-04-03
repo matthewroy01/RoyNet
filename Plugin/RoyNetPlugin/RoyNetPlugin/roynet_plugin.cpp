@@ -7,7 +7,7 @@
 
 #include "roynet_plugin.h"
 
-int testFunction()
+int TestFunction()
 {
-	return 0;
+	return -6;
 }

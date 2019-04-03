@@ -19,7 +19,7 @@ extern "C"
 #endif // __cplusplus
 
 	ROYNET_SYMBOL
-	int testFunction();
+	int TestFunction();
 
 #ifdef __cplusplus
 }

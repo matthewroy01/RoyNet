@@ -6,6 +6,8 @@
  *	original code by Dan Buckstein, 2018
 */
 
+#define ROYNET_DLLEXPORT 1
+
 #ifndef ROYNET_PLUGIN_CONFIG_H
 #define ROYNET_PLUGIN_CONFIG_H
 
