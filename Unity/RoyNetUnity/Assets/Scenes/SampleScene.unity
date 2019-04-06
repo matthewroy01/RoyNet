@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doNetworking: 1
-  doDebugMessages: 0
+  doDebugMessages: 1
   model: 0
   externalServerExe: 0
   delayBetweenUpdates: 0

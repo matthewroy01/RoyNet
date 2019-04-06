@@ -10,7 +10,7 @@ public class RoyNetManager : MonoBehaviour
     const string DLL_NAME = "RoyNetPlugin";
 
     [DllImport(DLL_NAME)]
-    static extern int TestFunction();
+    static extern int testAdd(int a, int b);
 
     public bool doNetworking;
     public bool doDebugMessages;
@@ -33,7 +33,7 @@ public class RoyNetManager : MonoBehaviour
         // start networking
         StartCoroutine(NetworkUpdate());
 
-        DebugMessage(TestFunction().ToString());
+        DebugMessage(testAdd(1, 2).ToString());
     }
 
     private void GetReplicators()
