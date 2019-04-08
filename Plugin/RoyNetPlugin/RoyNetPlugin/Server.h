@@ -3,6 +3,15 @@
 
 #include "Peer.h"
 
+#include <vector>
+#include <string>
+
+struct ClientData
+{
+	RakNet::RakNetGUID address;
+	int num;
+};
+
 class Server : public Peer
 {
 public:
@@ -11,6 +20,8 @@ public:
 
 	void Initialize() override;
 	void NetworkingReceive() override;
+
+	std::vector<ClientData> clients;
 };
 
 #endif // !SERVER_H

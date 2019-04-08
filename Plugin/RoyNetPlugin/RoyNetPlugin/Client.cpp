@@ -2,8 +2,6 @@
 
 #include "Client.h"
 
-#include "Messages.h"
-
 void Client::Initialize()
 {
 	// buffer
@@ -20,7 +18,10 @@ void Client::Initialize()
 
 	// save IP address and name
 	strcpy_s(str, DEFAULT_IP_ADDRESS.c_str());
-	clientName = DEFAULT_CLIENT_NAME;
+	strcpy_s(clientName, DEFAULT_CLIENT_NAME.c_str());
+
+	// set client num to -1 by default
+	num = -1;
 
 	// start the client by connecting to the given IP and port
 	peer->Connect(str, port, 0, 0);
@@ -32,9 +33,12 @@ void Client::NetworkingReceive()
 	{
 		switch (packet->data[0])
 		{
-			case 0:
+			case ID_CONNECTION_CONFIRMATION_MESSAGE:
 			{
+				const Msg_Connection_Confirmation* msg = (Msg_Connection_Confirmation*)packet->data;
+				num = msg->num;
 
+				break;
 			}
 			default:
 			{

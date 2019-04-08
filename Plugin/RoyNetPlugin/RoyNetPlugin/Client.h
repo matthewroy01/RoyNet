@@ -12,7 +12,8 @@ public:
 	void Initialize() override;
 	void NetworkingReceive() override;
 
-	std::string clientName;
+	char clientName[MAX_NAME_LENGTH];
+	int num;
 };
 
 #endif // !CLIENT_H

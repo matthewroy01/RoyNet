@@ -2,8 +2,6 @@
 
 #include "Server.h"
 
-#include "Messages.h"
-
 void Server::Initialize()
 {
 	// create and return instance of peer interface
@@ -24,9 +22,31 @@ void Server::NetworkingReceive()
 	{
 		switch (packet->data[0])
 		{
-			case 0:
+			case ID_NEW_INCOMING_CONNECTION:
 			{
+				// add the client to the connected users list
+				ClientData newClient;
+				newClient.address = packet->guid;
+				clients.push_back(newClient);
 
+				// send to the client that just connected the current information of the lobby and their player number
+				Msg_Connection_Confirmation connectMsg;
+				connectMsg.typeID = ID_CONNECTION_CONFIRMATION_MESSAGE;
+
+				// for each connected user
+				for (int i = 0; i < clients.size(); i++)
+				{
+					// loop through vector to determine the index of the newly added client	
+					if (packet->guid == clients[i].address)
+					{
+						connectMsg.num = i + 1;
+					}
+				}
+
+				// send message back to client to confirm connection
+				peer->Send((char*)&connectMsg, sizeof(Msg_Connection_Confirmation), HIGH_PRIORITY, RELIABLE_ORDERED, 0, packet->systemAddress, false);
+
+				break;
 			}
 			default:
 			{

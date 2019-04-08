@@ -10,6 +10,8 @@
 
 #include <string>
 
+#include "Messages.h"
+
 class Peer
 {
 public:
