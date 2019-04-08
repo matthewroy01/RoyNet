@@ -12,6 +12,15 @@ public class RoyNetManager : MonoBehaviour
     [DllImport(DLL_NAME)]
     static extern int testAdd(int a, int b);
 
+    [DllImport(DLL_NAME)]
+    static extern int rnStart(int isServer);
+
+    [DllImport(DLL_NAME)]
+    static extern int rnUpdate();
+
+    [DllImport(DLL_NAME)]
+    static extern int rnStop();
+
     public bool doNetworking;
     public bool doDebugMessages;
 
@@ -31,6 +40,9 @@ public class RoyNetManager : MonoBehaviour
         GetReplicators();
 
         // start networking
+        rnStart(1);
+
+        // start updating
         StartCoroutine(NetworkUpdate());
 
         DebugMessage(testAdd(1, 2).ToString());
@@ -55,6 +67,7 @@ public class RoyNetManager : MonoBehaviour
         while (doNetworking)
         {
             DebugMessage("network update");
+            rnUpdate();
 
             yield return new WaitForSeconds(delayBetweenUpdates);
         }
@@ -66,6 +79,11 @@ public class RoyNetManager : MonoBehaviour
         {
             Debug.Log(msg);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        rnStop();
     }
 }
 

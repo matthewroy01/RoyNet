@@ -13,27 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Plugin Requirements">
+      <UniqueIdentifier>{37580689-0cfe-4da0-b730-daca43d9c6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plugin Requirements">
+      <UniqueIdentifier>{28273492-bd1c-4fb5-9951-45f1abe7f06e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RoyNetPlugin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Peer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files\Plugin Requirements</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files\Plugin Requirements</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RoyNetPlugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="Client.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Peer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files\Plugin Requirements</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files\Plugin Requirements</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
