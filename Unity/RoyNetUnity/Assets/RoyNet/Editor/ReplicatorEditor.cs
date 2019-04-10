@@ -30,37 +30,40 @@ public class ReplicatorEditor : Editor
             foldouts = new bool[targ.classNames.Count];
         }
 
-        // loop through all components
-        for(int i = 0; i < targ.classNames.Count; ++i)
+        if (foldouts.Length > 0)
         {
-            foldouts[i] = EditorGUILayout.Foldout(foldouts[i], targ.classNames[i]);
-
-            // if the foldout is active
-            if (foldouts[i])
+            // loop through all components
+            for (int i = 0; i < targ.classNames.Count; ++i)
             {
-                // loop through all of the members
-                for (int j = 0; j < targ.members.Count; ++j)
+                foldouts[i] = EditorGUILayout.Foldout(foldouts[i], targ.classNames[i]);
+
+                // if the foldout is active
+                if (foldouts[i])
                 {
-                    MyMemberInfo tmp = targ.members[j];
-
-                    // check if that member matched the current foldout
-                    if (targ.members[j].owner == targ.classNames[i])
+                    // loop through all of the members
+                    for (int j = 0; j < targ.members.Count; ++j)
                     {
-                        // set send bool
-                        tmp.send = EditorGUILayout.Toggle(tmp.name, tmp.send);
+                        MyMemberInfo tmp = targ.members[j];
 
-                        // set dead reckon bool if the type is dead reckonable
-                        if (CheckDeadReckonType(tmp.type))
+                        // check if that member matched the current foldout
+                        if (targ.members[j].owner == targ.classNames[i])
                         {
-                            tmp.deadReckon = EditorGUILayout.Toggle("dead reckon?", tmp.deadReckon);
+                            // set send bool
+                            tmp.send = EditorGUILayout.Toggle(tmp.name, tmp.send);
+
+                            // set dead reckon bool if the type is dead reckonable
+                            if (CheckDeadReckonType(tmp.type))
+                            {
+                                tmp.deadReckon = EditorGUILayout.Toggle("dead reckon?", tmp.deadReckon);
+                            }
+
+                            // add a space for neatness
+                            EditorGUILayout.Space();
                         }
 
-                        // add a space for neatness
-                        EditorGUILayout.Space();
+                        // editing structs this way only creates a copy so we have to set the changes back into the original
+                        targ.members[j] = tmp;
                     }
-
-                    // editing structs this way only creates a copy so we have to set the changes back into the original
-                    targ.members[j] = tmp;
                 }
             }
         }

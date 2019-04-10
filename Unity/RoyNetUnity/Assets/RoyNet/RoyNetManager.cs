@@ -57,6 +57,15 @@ public class RoyNetManager : MonoBehaviour
         for (int i = 0; i < repl.Length; ++i)
         {
             replicated.Add(repl[i]);
+            replicated[i].ReflectMembersPointersOnly();
+
+            for (int j = 0; j < repl[i].members.Count; ++j)
+            {
+                if (repl[i].members[j].send == true)
+                {
+                    Debug.Log(repl[i].members[j].pointerProperty.GetValue(repl[i].members[j].comp));
+                }
+            }
         }
 
         DebugMessage("Found " + replicated.Count + " Replicators in the scene.");
