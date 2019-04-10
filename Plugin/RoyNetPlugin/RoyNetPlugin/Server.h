@@ -20,6 +20,7 @@ public:
 
 	void Initialize() override;
 	void NetworkingReceive() override;
+	void NetworkingSend() override;
 
 	std::vector<ClientData> clients;
 };

@@ -25,6 +25,7 @@ public:
 
 	virtual void Initialize() = 0;
 	virtual void NetworkingReceive() = 0;
+	virtual void NetworkingSend() = 0;
 };
 
 #endif // !PEER_H

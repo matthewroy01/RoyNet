@@ -11,6 +11,7 @@ public:
 
 	void Initialize() override;
 	void NetworkingReceive() override;
+	void NetworkingSend() override;
 
 	char clientName[MAX_NAME_LENGTH];
 	int num;

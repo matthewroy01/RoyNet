@@ -27,8 +27,16 @@ int rnStart(int isServer)
 
 int rnUpdate()
 {
-	// receive messages
-	netInstance->NetworkingReceive();
+	int testCount = 100;
+
+	while (true)
+	{
+		// receive messages
+		netInstance->NetworkingReceive();
+
+		// send messages
+		netInstance->NetworkingSend();
+	}
 
 	return 0;
 }
@@ -72,6 +80,8 @@ int main()
 			std::cout << "Invalid input..." << std::endl;
 		}
 	}
+
+	rnUpdate();
 
 	std::cin.get();
 

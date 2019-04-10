@@ -17,7 +17,7 @@ struct Msg
 	unsigned char typeID;
 };
 
-struct Msg_Connection_Confirmation : public Msg
+struct Msg_Int : public Msg
 {
 	int num;
 };
@@ -26,7 +26,9 @@ struct Msg_Connection_Confirmation : public Msg
 
 enum GameMessages
 {
-	ID_CONNECTION_CONFIRMATION_MESSAGE
+	ID_CUSTOM_MESSAGE_START = ID_USER_PACKET_ENUM,
+	ID_TEST_MESSAGE,
+	ID_CONNECTION_CONFIRMATION_MESSAGE,
 };
 
 #endif // !MESSAGES_H

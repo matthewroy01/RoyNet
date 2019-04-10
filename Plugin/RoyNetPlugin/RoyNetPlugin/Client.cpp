@@ -33,12 +33,26 @@ void Client::NetworkingReceive()
 	{
 		switch (packet->data[0])
 		{
-			case ID_CONNECTION_CONFIRMATION_MESSAGE:
+			case ID_CONNECTION_REQUEST_ACCEPTED:
 			{
-				const Msg_Connection_Confirmation* msg = (Msg_Connection_Confirmation*)packet->data;
+				printf("server acknowledged connection\n");
+
+				const Msg_Int* msg = (Msg_Int*)packet->data;
 				num = msg->num;
 
+				Msg_Int msg2;
+				msg2.typeID = ID_TEST_MESSAGE;
+
+				// send message back to server as a test
+				peer->Send((char*)&msg2, sizeof(Msg_Int), HIGH_PRIORITY, RELIABLE_ORDERED, 0, packet->systemAddress, false);
+
 				break;
+			}
+			case ID_TEST_MESSAGE:
+			{
+				const Msg_Int* msg = (Msg_Int*)packet->data;
+
+				printf("Message received from server\n");
 			}
 			default:
 			{
@@ -46,4 +60,9 @@ void Client::NetworkingReceive()
 			}
 		}
 	}
+}
+
+void Client::NetworkingSend()
+{
+
 }
