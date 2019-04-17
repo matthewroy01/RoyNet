@@ -11,6 +11,8 @@ public class ReplicatorEditor : Editor
     private System.Type[] deadReckonTypes = { typeof(float), typeof(Vector2), typeof(Vector3), typeof(Vector4) };
     bool[] foldouts;
 
+    private bool drawFoldouts = false;
+
     private List<string> componentNames;
 
     private void Start()
@@ -27,15 +29,16 @@ public class ReplicatorEditor : Editor
         if (GUILayout.Button("Get Members"))
         {
             targ.ReflectMembers();
-            foldouts = new bool[targ.classNames.Count];
+            foldouts = new bool[targ.components.Count];
+            drawFoldouts = true;
         }
 
-        if (foldouts.Length > 0)
+        if (drawFoldouts && foldouts.Length > 0)
         {
             // loop through all components
-            for (int i = 0; i < targ.classNames.Count; ++i)
+            for (int i = 0; i < targ.components.Count; ++i)
             {
-                foldouts[i] = EditorGUILayout.Foldout(foldouts[i], targ.classNames[i]);
+                foldouts[i] = EditorGUILayout.Foldout(foldouts[i], targ.components[i].Item2);
 
                 // if the foldout is active
                 if (foldouts[i])
@@ -46,10 +49,10 @@ public class ReplicatorEditor : Editor
                         MyMemberInfo tmp = targ.members[j];
 
                         // check if that member matched the current foldout
-                        if (targ.members[j].owner == targ.classNames[i])
+                        if (targ.members[j].owner == targ.components[i].Item2)
                         {
                             // set send bool
-                            tmp.send = EditorGUILayout.Toggle(tmp.name, tmp.send);
+                            targ.toSend[j] = EditorGUILayout.Toggle(tmp.name, targ.toSend[j]);
 
                             // set dead reckon bool if the type is dead reckonable
                             if (CheckDeadReckonType(tmp.type))

@@ -8,8 +8,11 @@ using System.Linq.Expressions;
 public class Replicator : MonoBehaviour
 {
     public List<MyMemberInfo> members = new List<MyMemberInfo>();
-    public List<string> classNames = new List<string>();
+    public List<bool> toSend = new List<bool>();
+    [SerializeField]
+    public List<Tuple<Component, string>> components = new List<Tuple<Component, string>>();
 
+    [SerializeField]
     Component[] comps;
 
     private string GetTypeAsString(MemberInfo member)
@@ -36,7 +39,7 @@ public class Replicator : MonoBehaviour
             if (comps[i].GetType().Name != "Replicator")
             {
                 // save name of component for display purposes
-                classNames.Add(comps[i].GetType().Name);
+                components.Add(new Tuple<Component, string>(comps[i], comps[i].GetType().Name));
 
                 // get type of component and save its member info
                 System.Type type = comps[i].GetType();
@@ -58,7 +61,7 @@ public class Replicator : MonoBehaviour
                         && (info[j].MemberType == MemberTypes.Property
                         || info[j].MemberType == MemberTypes.Field))
                     {
-                        Debug.Log(info[j].Name + "\nMemberType: " + info[j]);
+                        //Debug.Log(info[j].Name + "\nMemberType: " + info[j]);
 
                         string typeAsString = GetTypeAsString(info[j]);
 
@@ -81,7 +84,8 @@ public class Replicator : MonoBehaviour
                             }
                         }
 
-                        members.Add(new MyMemberInfo(ptr, ptrF, ptrP, info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), classNames[i]));
+                        members.Add(new MyMemberInfo(ptr, ptrF, ptrP, info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), components[i].Item2));
+                        toSend.Add(false);
                     }
                 }
             }
@@ -94,15 +98,13 @@ public class Replicator : MonoBehaviour
     {
         int k = 0;
 
-        comps = GetComponents(typeof(Component));
-
-        for (int i = 0; i < comps.Length; ++i)
+        for (int i = 0; i < components.Count; ++i)
         {
             // exclude Replicator from the list
-            if (comps[i].GetType().Name != "Replicator")
+            if (components[i].Item1.GetType().Name != "Replicator")
             {
                 // get type of component and save its member info
-                System.Type type = comps[i].GetType();
+                System.Type type = components[i].Item1.GetType();
                 MemberInfo[] info = type.GetMembers();
 
                 for (int j = 0; j < info.Length; ++j)
@@ -132,19 +134,19 @@ public class Replicator : MonoBehaviour
                         {
                             case FieldInfo fieldInfo:
                                 {
-                                    ptr = fieldInfo.GetValue(comps[i]);
+                                    ptr = fieldInfo.GetValue(components[i].Item1);
                                     ptrF = fieldInfo;
                                     break;
                                 }
                             case PropertyInfo propertyInfo:
                                 {
-                                    ptr = propertyInfo.GetValue(comps[i]);
+                                    ptr = propertyInfo.GetValue(components[i].Item1);
                                     ptrP = propertyInfo;
                                     break;
                                 }
                         }
 
-                        members[k].SetPointers(ptr, ptrF, ptrP, comps[i]);
+                        members[k].SetPointers(ptr, ptrF, ptrP, components[i].Item1);
                         ++k;
                     }
                 }
@@ -156,13 +158,18 @@ public class Replicator : MonoBehaviour
 
     private void ClearMembers()
     {
+        if (toSend.Count > members.Count)
+        {
+            toSend.Clear();
+        }
+
         members.Clear();
-        classNames.Clear();
+        components.Clear();
     }
 }
 
 [System.Serializable]
-public struct MyMemberInfo
+public class MyMemberInfo
 {
     public MyMemberInfo(object ptr, FieldInfo ptrF, PropertyInfo ptrP, string n, string tn, System.Type t, string tno, string o)
     {
@@ -184,12 +191,17 @@ public struct MyMemberInfo
 
     public void SetPointers(object ptr, FieldInfo ptrF, PropertyInfo ptrP, Component c)
     {
-        MyMemberInfo tmp = new MyMemberInfo(ptr, ptrF, ptrP, name, typeName, type, typeNameOrigin, owner);
-        this = tmp;
-        /*pointer = ptr;
+        //MyMemberInfo tmp = new MyMemberInfo(ptr, ptrF, ptrP, name, typeName, type, typeNameOrigin, owner);
+        //this = tmp;
+        pointer = ptr;
         pointerField = ptrF;
         pointerProperty = ptrP;
-        comp = c;*/
+        comp = c;
+    }
+
+    public void SetSend(bool s)
+    {
+        send = s;
     }
 
     public bool send;
@@ -199,8 +211,12 @@ public struct MyMemberInfo
     public System.Type type;
     public string typeNameOrigin;
     public string owner;
+    [SerializeField]
     public object pointer;
+    [SerializeField]
     public FieldInfo pointerField;
+    [SerializeField]
     public PropertyInfo pointerProperty;
+    [SerializeField]
     public Component comp;
 }

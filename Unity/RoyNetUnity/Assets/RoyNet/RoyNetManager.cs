@@ -34,11 +34,14 @@ public class RoyNetManager : MonoBehaviour
     [Header("Objects for Replication")]
     public List<Replicator> replicated;
 
-    void Start()
+    private void Awake()
     {
         // find and store all replicators in the scene
         GetReplicators();
+    }
 
+    void Start()
+    {
         // start networking
         rnStart(1);
 
@@ -57,10 +60,12 @@ public class RoyNetManager : MonoBehaviour
         for (int i = 0; i < repl.Length; ++i)
         {
             replicated.Add(repl[i]);
-            replicated[i].ReflectMembersPointersOnly();
+            replicated[i].ReflectMembers();
 
             for (int j = 0; j < repl[i].members.Count; ++j)
             {
+                repl[i].members[j].SetSend(repl[i].toSend[j]);
+
                 if (repl[i].members[j].send == true)
                 {
                     Debug.Log(repl[i].members[j].pointerProperty.GetValue(repl[i].members[j].comp));
