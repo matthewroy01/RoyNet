@@ -5,18 +5,20 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	public float movSpd;
+    public float movSpdMax;
 	private Rigidbody rb;
 
     private float axisMin = 0.1f;
 
 	void Start ()
     {
-		rb = GetComponent<Rigidbody>();
+        rb = GetComponentInChildren<Rigidbody>();
 	}
 	
 	void Update ()
     {
 		Movement();
+        TerminalVelocities();
         Align();
         Respawn();
 	}
@@ -44,6 +46,39 @@ public class PlayerMovement : MonoBehaviour
 			rb.AddForce(transform.right * -1 * movSpd);
 		}
 	}
+
+    private void TerminalVelocities()
+    {
+        // x terminal velocity
+        if (rb.velocity.x > movSpdMax)
+        {
+            rb.velocity = new Vector3(movSpdMax, rb.velocity.y, rb.velocity.z);
+        }
+        else if (rb.velocity.x < movSpdMax * -1)
+        {
+            rb.velocity = new Vector3(movSpdMax * -1, rb.velocity.y, rb.velocity.z);
+        }
+
+        // y terminal velocity
+        if (rb.velocity.y > movSpdMax)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, movSpdMax, rb.velocity.z);
+        }
+        else if (rb.velocity.y < movSpdMax * -1)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, movSpdMax * -1, rb.velocity.z);
+        }
+
+        // z terminal velocity
+        if (rb.velocity.z > movSpdMax)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, movSpdMax);
+        }
+        else if (rb.velocity.z < movSpdMax * -1)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, movSpdMax * -1);
+        }
+    }
 
     private void Align()
     {

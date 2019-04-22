@@ -84,7 +84,7 @@ public class Replicator : MonoBehaviour
                             }
                         }
 
-                        members.Add(new MyMemberInfo(ptr, ptrF, ptrP, info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), components[i].Item2));
+                        members.Add(new MyMemberInfo(ptr, ptrF, ptrP, info[j].Name, typeAsString, Type.GetType(typeAsString), info[j].MemberType.ToString(), components[i].Item1, components[i].Item2));
                         toSend.Add(false);
                     }
                 }
@@ -171,7 +171,7 @@ public class Replicator : MonoBehaviour
 [System.Serializable]
 public class MyMemberInfo
 {
-    public MyMemberInfo(object ptr, FieldInfo ptrF, PropertyInfo ptrP, string n, string tn, System.Type t, string tno, string o)
+    public MyMemberInfo(object ptr, FieldInfo ptrF, PropertyInfo ptrP, string n, string tn, System.Type t, string tno, Component c, string o)
     {
         send = false;
         deadReckon = false;
@@ -180,7 +180,7 @@ public class MyMemberInfo
         pointerField = ptrF;
         pointerProperty = ptrP;
 
-        comp = null;
+        comp = c;
 
         name = n;
         typeName = tn;

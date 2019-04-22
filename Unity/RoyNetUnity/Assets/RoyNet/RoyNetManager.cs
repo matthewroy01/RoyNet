@@ -32,7 +32,9 @@ public class RoyNetManager : MonoBehaviour
     public float delayBetweenUpdates;
 
     [Header("Objects for Replication")]
-    public List<Replicator> replicated;
+    public List<Replicator> replicated = new List<Replicator>();
+
+    public List<Packet> packets = new List<Packet>();
 
     private void Awake()
     {
@@ -47,8 +49,6 @@ public class RoyNetManager : MonoBehaviour
 
         // start updating
         StartCoroutine(NetworkUpdate());
-
-        DebugMessage(testAdd(1, 2).ToString());
     }
 
     private void GetReplicators()
@@ -66,9 +66,13 @@ public class RoyNetManager : MonoBehaviour
             {
                 repl[i].members[j].SetSend(repl[i].toSend[j]);
 
-                if (repl[i].members[j].send == true)
+                // if we find a true value
+                if (replicated[i].members[j].send == true)
                 {
-                    Debug.Log(repl[i].members[j].pointerProperty.GetValue(repl[i].members[j].comp));
+                    // create a new packet if there isn't already one with this ID
+                    Packet tmp = AddNewPacket(i);
+
+                    tmp.objects.Add(replicated[i].members[j].pointerProperty.GetValue(replicated[i].members[j].comp));
                 }
             }
         }
@@ -81,9 +85,40 @@ public class RoyNetManager : MonoBehaviour
         while (doNetworking)
         {
             DebugMessage("network update");
+            DebugReplicators();
             rnUpdate();
 
             yield return new WaitForSeconds(delayBetweenUpdates);
+        }
+    }
+
+    private Packet AddNewPacket(int ID)
+    {
+        // see if a packet with the given ID has already been created
+        for (int i = 0; i < packets.Count; ++i)
+        {
+            if (packets[i].ID == ID)
+            {
+                return packets[i];
+            }
+        }
+
+        // make a new packet
+        Packet tmp = new Packet(ID);
+        // add it to the list
+        packets.Add(tmp);
+
+        return packets[packets.Count - 1];
+    }
+
+    private void DebugReplicators()
+    {
+        for (int i = 0; i < packets.Count; ++i)
+        {
+            for (int j = 0; j < packets[i].objects.Count; ++j)
+            {
+                DebugMessage(packets[i].objects[j].ToString());
+            }
         }
     }
 

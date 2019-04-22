@@ -272,18 +272,6 @@ Transform:
   m_Father: {fileID: 1907693461}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!134 &259201169
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ' (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)'
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
 --- !u!1 &264481910
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doNetworking: 1
-  doDebugMessages: 0
+  doDebugMessages: 1
   model: 0
   externalServerExe: 0
   delayBetweenUpdates: 0
@@ -412,8 +400,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1568418361}
-  m_RootOrder: 0
+  m_Father: {fileID: 1816691126}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925814079
 GameObject:
@@ -688,6 +676,19 @@ Transform:
   m_Father: {fileID: 1907693461}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!134 &1333218728
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ' (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)'
+  dynamicFriction: 0.6
+  staticFriction: 0.6
+  bounciness: 0
+  frictionCombine: 0
+  bounceCombine: 0
 --- !u!1 &1568418357
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,12 +701,8 @@ GameObject:
   - component: {fileID: 1568418360}
   - component: {fileID: 1568418359}
   - component: {fileID: 1568418358}
-  - component: {fileID: 1568418364}
-  - component: {fileID: 1568418363}
-  - component: {fileID: 1568418362}
-  - component: {fileID: 1568418365}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +715,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568418357}
-  m_Material: {fileID: 259201169}
+  m_Material: {fileID: 1333218728}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -778,757 +775,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568418357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 534669905}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Children: []
+  m_Father: {fileID: 1816691126}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568418362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568418357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc50ce2a03f05b440be475c1da1607db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camSpeedHorizontal: 5
-  camSpeedVertical: 5
---- !u!114 &1568418363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568418357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e9e65ed3529484cb8baffd86119174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movSpd: 20
---- !u!54 &1568418364
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568418357}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 1
---- !u!114 &1568418365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568418357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  members:
-  - send: 1
-    deadReckon: 0
-    name: position
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localPosition
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: eulerAngles
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localEulerAngles
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: right
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: up
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: forward
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: rotation
-    typeName: UnityEngine.Quaternion
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localRotation
-    typeName: UnityEngine.Quaternion
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localScale
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: parent
-    typeName: UnityEngine.Transform
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: worldToLocalMatrix
-    typeName: UnityEngine.Matrix4x4
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localToWorldMatrix
-    typeName: UnityEngine.Matrix4x4
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: root
-    typeName: UnityEngine.Transform
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: childCount
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lossyScale
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: hasChanged
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: hierarchyCapacity
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: hierarchyCount
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Transform
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sharedMesh
-    typeName: UnityEngine.Mesh
-    typeNameOrigin: Property
-    owner: MeshFilter
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: mesh
-    typeName: UnityEngine.Mesh
-    typeNameOrigin: Property
-    owner: MeshFilter
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: additionalVertexStreams
-    typeName: UnityEngine.Mesh
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: subMeshStartIndex
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightmapTilingOffset
-    typeName: UnityEngine.Vector4
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightProbeAnchor
-    typeName: UnityEngine.Transform
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: castShadows
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: motionVectors
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: useLightProbes
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: bounds
-    typeName: UnityEngine.Bounds
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: enabled
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: isVisible
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: shadowCastingMode
-    typeName: UnityEngine.Rendering.ShadowCastingMode
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: receiveShadows
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: motionVectorGenerationMode
-    typeName: UnityEngine.MotionVectorGenerationMode
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightProbeUsage
-    typeName: UnityEngine.Rendering.LightProbeUsage
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: reflectionProbeUsage
-    typeName: UnityEngine.Rendering.ReflectionProbeUsage
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: renderingLayerMask
-    typeName: UInt32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: rendererPriority
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sortingLayerName
-    typeName: System.String
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sortingLayerID
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sortingOrder
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: allowOcclusionWhenDynamic
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: isPartOfStaticBatch
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: worldToLocalMatrix
-    typeName: UnityEngine.Matrix4x4
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: localToWorldMatrix
-    typeName: UnityEngine.Matrix4x4
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightProbeProxyVolumeOverride
-    typeName: UnityEngine.GameObject
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: probeAnchor
-    typeName: UnityEngine.Transform
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightmapIndex
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: realtimeLightmapIndex
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: lightmapScaleOffset
-    typeName: UnityEngine.Vector4
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: realtimeLightmapScaleOffset
-    typeName: UnityEngine.Vector4
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: materials
-    typeName: UnityEngine.Material[]
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: material
-    typeName: UnityEngine.Material
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sharedMaterial
-    typeName: UnityEngine.Material
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sharedMaterials
-    typeName: UnityEngine.Material[]
-    typeNameOrigin: Property
-    owner: MeshRenderer
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: center
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: radius
-    typeName: Single
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: height
-    typeName: Single
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: direction
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: enabled
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: attachedRigidbody
-    typeName: UnityEngine.Rigidbody
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: isTrigger
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: contactOffset
-    typeName: Single
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: bounds
-    typeName: UnityEngine.Bounds
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sharedMaterial
-    typeName: UnityEngine.PhysicMaterial
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: material
-    typeName: UnityEngine.PhysicMaterial
-    typeNameOrigin: Property
-    owner: CapsuleCollider
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: velocity
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: angularVelocity
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: drag
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: angularDrag
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: mass
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: useGravity
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: maxDepenetrationVelocity
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: isKinematic
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: freezeRotation
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: constraints
-    typeName: UnityEngine.RigidbodyConstraints
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: collisionDetectionMode
-    typeName: UnityEngine.CollisionDetectionMode
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: centerOfMass
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: worldCenterOfMass
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: inertiaTensorRotation
-    typeName: UnityEngine.Quaternion
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: inertiaTensor
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: detectCollisions
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: position
-    typeName: UnityEngine.Vector3
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: rotation
-    typeName: UnityEngine.Quaternion
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: interpolation
-    typeName: UnityEngine.RigidbodyInterpolation
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: solverIterations
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sleepThreshold
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: maxAngularVelocity
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: solverVelocityIterations
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sleepVelocity
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: sleepAngularVelocity
-    typeName: Single
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: useConeFriction
-    typeName: Boolean
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: solverIterationCount
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: solverVelocityIterationCount
-    typeName: Int32
-    typeNameOrigin: Property
-    owner: Rigidbody
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: movSpd
-    typeName: System.Single
-    typeNameOrigin: Field
-    owner: PlayerMovement
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: camSpeedHorizontal
-    typeName: System.Single
-    typeNameOrigin: Field
-    owner: FirstPersonCamera
-    comp: {fileID: 0}
-  - send: 0
-    deadReckon: 0
-    name: camSpeedVertical
-    typeName: System.Single
-    typeNameOrigin: Field
-    owner: FirstPersonCamera
-    comp: {fileID: 0}
-  comps:
-  - {fileID: 1568418361}
-  - {fileID: 1568418360}
-  - {fileID: 1568418359}
-  - {fileID: 1568418358}
-  - {fileID: 1568418364}
-  - {fileID: 1568418363}
-  - {fileID: 1568418362}
-  - {fileID: 1568418365}
 --- !u!1 &1751269038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +872,266 @@ Transform:
   m_Father: {fileID: 1907693461}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1816691125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816691126}
+  - component: {fileID: 1816691130}
+  - component: {fileID: 1816691127}
+  - component: {fileID: 1816691128}
+  - component: {fileID: 1816691129}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1816691126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816691125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1568418361}
+  - {fileID: 534669905}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816691127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816691125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e9e65ed3529484cb8baffd86119174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movSpd: 20
+  movSpdMax: 10
+--- !u!114 &1816691128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816691125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc50ce2a03f05b440be475c1da1607db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camSpeedHorizontal: 5
+  camSpeedVertical: 5
+--- !u!114 &1816691129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816691125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d25fed24eb7134683e522c95186e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  members:
+  - send: 0
+    deadReckon: 0
+    name: position
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: localPosition
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: eulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: localEulerAngles
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: right
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: up
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: forward
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: rotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: localRotation
+    typeName: UnityEngine.Quaternion
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: localScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: parent
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: worldToLocalMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: localToWorldMatrix
+    typeName: UnityEngine.Matrix4x4
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: root
+    typeName: UnityEngine.Transform
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: childCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: lossyScale
+    typeName: UnityEngine.Vector3
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: hasChanged
+    typeName: Boolean
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCapacity
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: hierarchyCount
+    typeName: Int32
+    typeNameOrigin: Property
+    owner: Transform
+    comp: {fileID: 1816691126}
+  - send: 0
+    deadReckon: 0
+    name: movSpd
+    typeName: System.Single
+    typeNameOrigin: Field
+    owner: PlayerMovement
+    comp: {fileID: 1816691127}
+  - send: 0
+    deadReckon: 0
+    name: movSpdMax
+    typeName: System.Single
+    typeNameOrigin: Field
+    owner: PlayerMovement
+    comp: {fileID: 1816691127}
+  - send: 0
+    deadReckon: 0
+    name: camSpeedHorizontal
+    typeName: System.Single
+    typeNameOrigin: Field
+    owner: FirstPersonCamera
+    comp: {fileID: 1816691128}
+  - send: 0
+    deadReckon: 0
+    name: camSpeedVertical
+    typeName: System.Single
+    typeNameOrigin: Field
+    owner: FirstPersonCamera
+    comp: {fileID: 1816691128}
+  toSend: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  comps:
+  - {fileID: 1816691126}
+  - {fileID: 1816691127}
+  - {fileID: 1816691128}
+  - {fileID: 1816691129}
+--- !u!54 &1816691130
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816691125}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 1
 --- !u!1 &1907693460
 GameObject:
   m_ObjectHideFlags: 0

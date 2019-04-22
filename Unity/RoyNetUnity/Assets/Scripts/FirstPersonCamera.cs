@@ -30,8 +30,8 @@ public class FirstPersonCamera : MonoBehaviour
 	private void CameraRotation()
 	{
 		// code found here: https://gamedev.stackexchange.com/questions/104693/how-to-use-input-getaxismouse-x-y-to-rotate-the-camera
-		yaw += camSpeedHorizontal * Input.GetAxis("Mouse X");
-        pitch -= camSpeedVertical * Input.GetAxis("Mouse Y");
+		yaw += camSpeedHorizontal * Input.GetAxisRaw("Mouse X");
+        pitch -= camSpeedVertical * Input.GetAxisRaw("Mouse Y");
 
         // prevent the player from looking up or down infinitely
         if (pitch > 90)
