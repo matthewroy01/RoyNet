@@ -4,6 +4,8 @@ using UnityEngine;
 
 // need this for plugin
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class RoyNetManager : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class RoyNetManager : MonoBehaviour
     static extern int rnStart(int isServer);
 
     [DllImport(DLL_NAME)]
-    static extern int rnUpdate();
+    static extern int rnUpdate(PacketRaw data);
 
     [DllImport(DLL_NAME)]
     static extern int rnStop();
@@ -73,6 +75,7 @@ public class RoyNetManager : MonoBehaviour
                     Packet tmp = AddNewPacket(i);
 
                     tmp.objects.Add(replicated[i].members[j].pointerProperty.GetValue(replicated[i].members[j].comp));
+                    Debug.Log("");
                 }
             }
         }
@@ -86,7 +89,13 @@ public class RoyNetManager : MonoBehaviour
         {
             DebugMessage("network update");
             DebugReplicators();
-            rnUpdate();
+
+            for (int i = 0; i < packets.Count; ++i)
+            {
+                rnUpdate(PacketToPacketRaw(packets[i]));
+            }
+
+            DebugMessage("Position is: " + packets[0].objects[0].ToString());
 
             yield return new WaitForSeconds(delayBetweenUpdates);
         }
@@ -109,6 +118,23 @@ public class RoyNetManager : MonoBehaviour
         packets.Add(tmp);
 
         return packets[packets.Count - 1];
+    }
+
+    private PacketRaw PacketToPacketRaw(Packet pack)
+    {
+        PacketRaw tmp;
+        tmp.data = System.Text.Encoding.UTF8.GetString(ObjectToByteArray(pack.objects)).ToCharArray();
+        return new PacketRaw();
+    }
+
+    public static byte[] ObjectToByteArray(object obj)
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        using (var ms = new MemoryStream())
+        {
+            bf.Serialize(ms, obj);
+            return ms.ToArray();
+        }
     }
 
     private void DebugReplicators()

@@ -22,6 +22,13 @@ struct Msg_Int : public Msg
 	int num;
 };
 
+struct PacketRaw
+{
+	int ID;
+	unsigned int size;
+	char data[256];
+};
+
 #pragma pack(pop)
 
 enum GameMessages
