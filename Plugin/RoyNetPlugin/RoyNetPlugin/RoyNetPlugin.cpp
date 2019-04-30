@@ -54,3 +54,20 @@ int rnStop()
 
 	return 1;
 }
+
+int sendTestTransform(Msg_TestTransform msg)
+{
+	if (netInstance != NULL)
+	{
+		netInstance->peer->Send((char*)&msg, sizeof(Msg_TestTransform), HIGH_PRIORITY, RELIABLE_ORDERED, 0, netInstance->packet->systemAddress, true);
+
+		return 0;
+	}
+
+	return 1;
+}
+
+Msg_TestTransform getTestTransform()
+{
+	return netInstance->getTestTransform();
+}

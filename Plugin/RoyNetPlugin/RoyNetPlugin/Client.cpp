@@ -35,7 +35,7 @@ void Client::NetworkingReceive()
 		{
 			case ID_CONNECTION_REQUEST_ACCEPTED:
 			{
-				printf("server acknowledged connection\n");
+//				printf("server acknowledged connection\n");
 
 				const Msg_Int* msg = (Msg_Int*)packet->data;
 				num = msg->num;
@@ -52,7 +52,7 @@ void Client::NetworkingReceive()
 			{
 				const Msg_Int* msg = (Msg_Int*)packet->data;
 
-				printf("Message received from server\n");
+//				printf("Message received from server\n");
 			}
 			default:
 			{

@@ -22,6 +22,12 @@ struct Msg_Int : public Msg
 	int num;
 };
 
+struct Msg_TestTransform : public Msg
+{
+	float px, py, pz;
+	float rx, ry, rz;
+};
+
 struct Packet
 {
 	int ID;
@@ -35,6 +41,7 @@ enum GameMessages
 	ID_CUSTOM_MESSAGE_START = ID_USER_PACKET_ENUM,
 	ID_TEST_MESSAGE,
 	ID_CONNECTION_CONFIRMATION_MESSAGE,
+	ID_TEST_TRANSFORM
 };
 
 #endif // !MESSAGES_H

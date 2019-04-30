@@ -54,7 +54,7 @@ void Server::NetworkingReceive()
 			{
 				const Msg_Int* msg = (Msg_Int*)packet->data;
 
-				printf("Message received from client\n");
+//				printf("Message received from client\n");
 
 				Msg_Int msg2;
 				msg2.typeID = ID_TEST_MESSAGE;
@@ -65,6 +65,10 @@ void Server::NetworkingReceive()
 					peer->Send((char*)&msg2, sizeof(Msg_Int), HIGH_PRIORITY, RELIABLE_ORDERED, 0, clients[i].address, false);
 				}
 				break;
+			}
+			case ID_TEST_TRANSFORM:
+			{
+				const Msg_TestTransform* msg = (Msg_TestTransform*)packet->data;
 			}
 			default:
 			{

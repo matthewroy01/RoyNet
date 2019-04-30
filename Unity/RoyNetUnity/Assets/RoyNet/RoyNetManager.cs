@@ -16,10 +16,13 @@ public class RoyNetManager : MonoBehaviour
     static extern int testAdd(int a, int b);
 
     [DllImport(DLL_NAME)]
+    static extern int sendTestTransform(Msg_TestTransform msg);
+
+    [DllImport(DLL_NAME)]
     static extern int rnStart(int isServer);
 
     [DllImport(DLL_NAME)]
-    static extern int rnUpdate(PacketRaw data);
+    static extern int rnUpdate(Msg_TestTransform data);
 
     [DllImport(DLL_NAME)]
     static extern int rnStop();
@@ -93,19 +96,10 @@ public class RoyNetManager : MonoBehaviour
             DebugMessage("network update");
             DebugReplicators();
 
-            // trying to test converting bytes back to usable data
-            PacketRaw raw = PacketToPacketRaw(packets[0]);
-            Packet tmp = packets[raw.ID];
-
-            for (int i = 0; i < tmp.objects.Count; ++i)
+            for (int i = 0; i < replicated.Count; ++i)
             {
-                Type t = tmp.objects[i].Item2;
-                tmp.objects[i] = new Tuple<object, Type>(raw, t);
-            }
-
-            for (int i = 0; i < packets.Count; ++i)
-            {
-                rnUpdate(PacketToPacketRaw(packets[i]));
+                Msg_TestTransform test = new Msg_TestTransform((int)GameMessages.ID_TEST_TRANSFORM, replicated[i].transform.position, replicated[i].transform.eulerAngles);
+                rnUpdate(test);
             }
 
             DebugMessage("Position is: " + packets[0].objects[0].ToString());
