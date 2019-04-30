@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System;
 
 // need this for plugin
 using System.Runtime.InteropServices;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
 
 public class RoyNetManager : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class RoyNetManager : MonoBehaviour
     {
         // find and store all replicators in the scene
         GetReplicators();
+
+        PacketToCharArray();
     }
 
     void Start()
@@ -74,7 +77,7 @@ public class RoyNetManager : MonoBehaviour
                     // create a new packet if there isn't already one with this ID
                     Packet tmp = AddNewPacket(i);
 
-                    tmp.objects.Add(replicated[i].members[j].pointerProperty.GetValue(replicated[i].members[j].comp));
+                    tmp.objects.Add(new Tuple<object, Type>(replicated[i].members[j].pointerProperty.GetValue(replicated[i].members[j].comp), (replicated[i].members[j].type)));
                     Debug.Log("");
                 }
             }
@@ -89,6 +92,16 @@ public class RoyNetManager : MonoBehaviour
         {
             DebugMessage("network update");
             DebugReplicators();
+
+            // trying to test converting bytes back to usable data
+            PacketRaw raw = PacketToPacketRaw(packets[0]);
+            Packet tmp = packets[raw.ID];
+
+            for (int i = 0; i < tmp.objects.Count; ++i)
+            {
+                Type t = tmp.objects[i].Item2;
+                tmp.objects[i] = new Tuple<object, Type>(raw, t);
+            }
 
             for (int i = 0; i < packets.Count; ++i)
             {
@@ -120,11 +133,36 @@ public class RoyNetManager : MonoBehaviour
         return packets[packets.Count - 1];
     }
 
+    private char[] PacketToCharArray()//Packet pack)
+    {
+        float test1 = 0.1f;
+
+        char[] testArray = new char[256];
+        testArray[0] = System.Convert.ToChar(test1);
+
+        int index = 0;
+        float test2 = (float)testArray[index];
+
+        Debug.Log(test2);
+
+        return testArray;
+    }
+
     private PacketRaw PacketToPacketRaw(Packet pack)
     {
-        PacketRaw tmp;
-        tmp.data = System.Text.Encoding.UTF8.GetString(ObjectToByteArray(pack.objects)).ToCharArray();
-        return new PacketRaw();
+        PacketRaw tmp = new PacketRaw();
+
+        // set ID
+        tmp.ID = pack.ID;
+
+        // set size
+        tmp.size = (uint)System.Runtime.InteropServices.Marshal.SizeOf(pack);
+
+        // set data by converting Packet data to a char array
+        byte[] bytes = ObjectToByteArray(pack.objects);
+        System.Convert.ToBase64CharArray(bytes, 0, bytes.Length, tmp.data, 0);
+
+        return tmp;
     }
 
     public static byte[] ObjectToByteArray(object obj)

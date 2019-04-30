@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public static class RoyNetConsts
 {
@@ -12,11 +13,11 @@ public struct Packet
     public Packet(int newID)
     {
         ID = newID;
-        objects = new List<object>();
+        objects = new List<Tuple<object, System.Type>>();
     }
 
     public int ID;
-    public List<object> objects;
+    public List<Tuple<object, System.Type>> objects;
 }
 
 public struct PacketRaw

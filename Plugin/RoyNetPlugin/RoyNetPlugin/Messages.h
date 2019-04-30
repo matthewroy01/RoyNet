@@ -22,10 +22,9 @@ struct Msg_Int : public Msg
 	int num;
 };
 
-struct PacketRaw
+struct Packet
 {
 	int ID;
-	unsigned int size;
 	char data[256];
 };
 
